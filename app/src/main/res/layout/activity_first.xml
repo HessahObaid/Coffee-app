@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="291dp"
+        android:layout_height="157dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAddToCoffee"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewCoffeeReq"
+        app:layout_constraintStart_toEndOf="@+id/txtViewCoffeeReq"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewCoffeeReq">
+
+        <RadioButton
+            android:id="@+id/radioDecaf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="selectCoffee"
+            android:text="Decaf" />
+
+        <RadioButton
+            android:id="@+id/radioExpresso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="selectCoffee"
+            android:text="Expresso" />
+
+        <RadioButton
+            android:id="@+id/radioColombian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="selectCoffee"
+            android:text="Colombian" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtViewCoffeeReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="39dp"
+        android:text="What kind of coffee u like"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAddToCoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="34dp"
+        android:text="What else do you like in your coffee ?"
+        app:layout_constraintBottom_toTopOf="@+id/creamChkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/creamChkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="27dp"
+        android:text="Cream"
+        app:layout_constraintBottom_toTopOf="@+id/sugarChkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddToCoffee" />
+
+    <CheckBox
+        android:id="@+id/sugarChkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="61dp"
+        android:text="Sugar"
+        app:layout_constraintBottom_toTopOf="@+id/btnOrder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creamChkBox" />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="137dp"
+        android:text="Make an order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sugarChkBox"
+        app:layout_constraintTop_toBottomOf="@+id/sugarChkBox" />
+</androidx.constraintlayout.widget.ConstraintLayout>
